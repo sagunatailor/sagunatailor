@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FBF1EA" />
+  <title>Saguna Tailor — Front-End Engineer</title>
+  <meta name="description" content="Portfolio of Saguna Tailor, a London-based Front-End Engineer with 20+ years of experience crafting accessible, customer-focused digital products for ASOS, the BMJ, Bwin, Orange and more." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23F4B400'/%3E%3Ccircle cx='16' cy='17' r='9' fill='%23C4825A'/%3E%3Cpath d='M6 20C5 6 27 6 26 20 24 12 19 11 16 11 12 11 8 14 6 20Z' fill='%231D1633'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <!-- ══════════ NAV ══════════ -->
+  <header class="bar" id="top">
+    <a class="me" href="#top" aria-label="Saguna Tailor — back to top">
+      <span class="me-badge"><img src="images/saguna-avatar.png" alt="" width="900" height="769" /></span>
+      <span class="me-name">Saguna Tailor</span>
+    </a>
+    <nav aria-label="Primary" id="nav">
+      <a href="#about">About</a>
+      <a href="#asos">Built at ASOS</a>
+      <a href="#work">Work</a>
+      <a href="#words">Words</a>
+      <a href="#skills">Skills</a>
+      <a class="nav-cta" href="#contact">Say hi</a>
+    </nav>
+    <div class="tools">
+      <button class="motion" id="motion" type="button" aria-pressed="false" aria-label="Pause animations"><span aria-hidden="true">❚❚</span></button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-lbl">Menu</span></button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- ══════════ HERO / OFFICE SCENE ══════════ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">London · Front-End Engineer</p>
+        <h1 id="hero-title">Hi, I’m <span>Saguna</span></h1>
+        <p class="hero-sub">Twenty years of accessible, colourful front-end — most recently at ASOS.</p>
+        <p class="hero-actions"><a class="btn btn-ink" href="#asos">See what I built at ASOS</a><a class="btn" href="#work">All my work</a></p>
+      </div>
+      <svg class="scene" viewBox="0 -40 1600 940" preserveAspectRatio="xMidYMid slice" role="group" aria-label="Illustration: a cartoon Saguna waving from her colourful home office. The labelled items link to Work, About, Skills and Contact.">
+        <defs>
+          <clipPath id="floralClip"><rect x="1090" y="110" width="510" height="600"/></clipPath>
+          <clipPath id="dotClip"><circle cx="1000" cy="330" r="54"/></clipPath>
+        </defs>
+        <g aria-hidden="true" stroke="#1D1633" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+          <!-- walls + floor -->
+          <rect y="-150" width="1600" height="1050" fill="#FBF1EA" stroke="none"/>
+          <path d="M1010 -150H1600V120L1090 168Z" fill="#F0DAD2" stroke="none"/>
+          <rect y="700" width="1600" height="200" fill="#DCC3AA" stroke="none"/>
+          <rect y="690" width="1600" height="14" fill="#fff"/>
+          <!-- string lights -->
+          <g transform="translate(0 -62)"><path d="M0 46Q330 120 700 80T1100 140" fill="none" stroke-width="2" opacity=".5"/>
+          <g stroke="none" fill="#FFD84D"><circle cx="90" cy="68" r="7"/><circle cx="210" cy="92" r="7"/><circle cx="340" cy="108" r="7"/><circle cx="470" cy="104" r="7"/><circle cx="600" cy="88" r="7"/><circle cx="740" cy="86" r="7"/><circle cx="880" cy="104" r="7"/><circle cx="1000" cy="128" r="7"/></g></g>
+
+          <!-- floral wall -->
+          <rect x="1090" y="110" width="510" height="600" fill="#fff"/>
+          <g id="flora" clip-path="url(#floralClip)"></g>
+          <rect x="1090" y="110" width="510" height="600" fill="none"/>
+
+          <!-- round wall art -->
+          <g transform="translate(0 80)">
+          <circle cx="1000" cy="330" r="54" fill="#fff"/>
+          <g clip-path="url(#dotClip)" stroke="none"><path d="M946 376c30-50 50-30 108-60v60Z" fill="#0E7C66"/><circle cx="1020" cy="310" r="22" fill="#E8452C"/><circle cx="980" cy="340" r="16" fill="#F4B400"/><path d="M960 290q30 10 40 50" stroke="#2447B8" stroke-width="10" fill="none"/></g>
+          <circle cx="1000" cy="330" r="54" fill="none"/></g>
+
+          <!-- window -->
+          <rect x="170" y="130" width="220" height="380" fill="#fff"/>
+          <rect x="182" y="142" width="196" height="356" fill="#CFE8F5" stroke-width="3"/>
+          <g stroke="none"><path d="M182 498V420l60-24 70 20 66-12v94Z" fill="#9AA3AE"/><ellipse cx="240" cy="448" rx="60" ry="34" fill="#4E9B5A"/><ellipse cx="330" cy="460" rx="50" ry="30" fill="#6BB36A"/></g>
+          <rect x="182" y="142" width="196" height="196" fill="#F4B400"/>
+          <rect x="182" y="338" width="196" height="8" fill="#FFEE7A" stroke="none"/>
+          <path d="M270 338v22" /><circle cx="270" cy="366" r="6" fill="#fff"/>
+          <rect x="160" y="506" width="240" height="16" rx="4" fill="#fff"/>
+          <rect x="196" y="530" width="170" height="150" rx="6" fill="#fff"/><path d="M222 530v150M250 530v150M278 530v150M306 530v150M334 530v150" stroke-width="3"/>
+          <!-- curtains -->
+          <path d="M120 84h72v470c-16 8-56 8-72 0Z" fill="#E11D74"/><path d="M146 90v460M170 90v460" stroke-width="2.5" opacity=".35"/>
+          <path d="M368 84h72v470c-16 8-56 8-72 0Z" fill="#E11D74"/><path d="M394 90v460M418 90v460" stroke-width="2.5" opacity=".35"/>
+          <path d="M100 82h360" stroke-width="6" fill="none"/><circle cx="98" cy="82" r="8" fill="#F4B400"/><circle cx="462" cy="82" r="8" fill="#F4B400"/>
+
+          <!-- daybed + rug -->
+          <ellipse cx="1330" cy="800" rx="170" ry="40" fill="#3FA95B"/>
+          <g stroke="none"><circle cx="1250" cy="796" r="11" fill="#E11D74"/><circle cx="1300" cy="812" r="11" fill="#2447B8"/><circle cx="1360" cy="790" r="11" fill="#E11D74"/><circle cx="1410" cy="808" r="11" fill="#F4B400"/></g>
+          <rect x="1120" y="600" width="450" height="100" rx="16" fill="#F4B400"/>
+          <path d="M1140 628h410" fill="none" opacity=".35"/>
+          <path d="M1370 590c50-24 120-10 170 8l10 62-196 4Z" fill="#1D1633"/><path d="M1290 600c40-20 90-10 110 8l-8 38-104 2Z" fill="#E11D74"/>
+          <rect x="1150" y="700" width="14" height="18" fill="#F4B400"/><rect x="1520" y="700" width="14" height="18" fill="#F4B400"/>
+
+          <!-- chair back (behind avatar) -->
+          <rect x="690" y="410" width="260" height="360" rx="100" fill="#E11D74"/>
+          <path d="M720 450c30-24 170-24 200 0" fill="none" stroke="#fff" opacity=".35" stroke-width="5"/>
+        </g>
+
+        <!-- Saguna -->
+        <image aria-hidden="true" class="avatar" href="images/saguna-avatar.png" x="570" y="318" width="480" height="410"/>
+        <g aria-hidden="true" stroke="#1D1633" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+          <!-- patterned cushion -->
+          <g transform="rotate(-14 960 640)"><rect x="910" y="590" width="104" height="104" rx="14" fill="#6D3FC6"/><circle cx="962" cy="642" r="30" fill="#E11D74" stroke="none"/><circle cx="962" cy="642" r="16" fill="#F4B400" stroke="none"/><circle cx="930" cy="610" r="7" fill="#fff" stroke="none"/><circle cx="994" cy="674" r="7" fill="#fff" stroke="none"/></g>
+          <!-- desk -->
+          <rect x="320" y="700" width="980" height="92" rx="6" fill="#E8BD85"/>
+          <path d="M380 700v92M450 700v92M520 700v92M590 700v92M660 700v92M730 700v92M800 700v92M870 700v92M940 700v92M1010 700v92M1080 700v92M1150 700v92M1220 700v92" stroke="#C99458" stroke-width="2.5" fill="none"/>
+          <rect x="320" y="792" width="980" height="26" rx="6" fill="#B77B45"/>
+          <rect x="360" y="818" width="34" height="90" fill="#B77B45"/><rect x="1226" y="818" width="34" height="90" fill="#B77B45"/>
+
+          <!-- monitor -->
+          <rect x="556" y="650" width="22" height="52" fill="#2A2540"/><rect x="520" y="694" width="94" height="10" rx="5" fill="#2A2540"/>
+          <rect x="470" y="450" width="190" height="210" rx="10" fill="#14101F"/>
+          <rect x="484" y="464" width="162" height="182" rx="4" fill="#1D1633" stroke="none"/>
+          <g stroke="none"><rect x="496" y="480" width="70" height="8" rx="4" fill="#E11D74"/><rect x="496" y="498" width="110" height="8" rx="4" fill="#F4B400"/><rect x="510" y="516" width="84" height="8" rx="4" fill="#3FD1B0"/><rect x="510" y="534" width="100" height="8" rx="4" fill="#8FB0FF"/><rect x="496" y="552" width="60" height="8" rx="4" fill="#E11D74"/><rect x="496" y="570" width="120" height="8" rx="4" fill="#F4B400"/><rect x="510" y="588" width="70" height="8" rx="4" fill="#3FD1B0"/><rect x="496" y="606" width="90" height="8" rx="4" fill="#8FB0FF"/></g>
+
+          <!-- laptop (silver MacBook lid, back to us) -->
+          <defs><linearGradient id="lid" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E4E6EA"/><stop offset="1" stop-color="#B4B9C1"/></linearGradient></defs>
+          <path d="M742 590h176l8 108H734Z" fill="url(#lid)"/>
+          <path d="M734 690h192l2 8H732Z" fill="#8E949D"/>
+          <g transform="translate(814 606) scale(.62)" stroke="#8E949D" stroke-width="2"><path d="M20 18C14 12 2 16 3 30c1 12 9 20 14 17 2-1 4-1 6 0 5 3 14-5 15-17C39 16 26 12 20 18Z" fill="#F7F8FA"/><path d="M20 16C20 8 24 4 30 3c0 7-4 12-10 13Z" fill="#F7F8FA"/><circle cx="39" cy="24" r="7" fill="#C9CDD3" stroke="none"/></g>
+          <!-- notebook + pen -->
+          <g transform="rotate(-8 480 746)"><rect x="410" y="722" width="150" height="50" rx="4" fill="#14101F"/><rect x="424" y="736" width="40" height="8" rx="2" fill="#E11D74" stroke="none"/></g>
+          <!-- glass + succulent -->
+          <path d="M1010 636h44l-4 62h-36Z" fill="#CFE8F5" fill-opacity=".8"/><path d="M1014 664h36l-2 32h-32Z" fill="#3FD1B0" stroke="none" opacity=".7"/>
+          <path d="M1130 698l-8-44h60l-8 44Z" fill="#E8452C"/><path d="M1152 654c-16-30-10-50 8-52 14 18 12 36-8 52ZM1152 654c20-24 40-24 46-12-8 14-26 18-46 12Z" fill="#3FA95B"/>
+        </g>
+
+        <!-- hotspots -->
+        <g class="hots" font-family="JetBrains Mono, monospace" font-weight="700" font-size="22">
+          <a class="hot" href="#work" aria-label="See my work"><rect x="716" y="560" width="230" height="150" fill="transparent"/><g transform="translate(756 652)"><g class="pill"><rect width="150" height="44" rx="22"/><text x="75" y="29" text-anchor="middle">WORK ↓</text></g></g></a>
+          <a class="hot" href="#about" aria-label="About me"><circle cx="1000" cy="410" r="64" fill="transparent"/><g transform="translate(1040 472)"><g class="pill"><rect width="120" height="44" rx="22"/><text x="60" y="29" text-anchor="middle">ABOUT</text></g></g></a>
+          <a class="hot" href="#skills" aria-label="My skills"><rect x="470" y="450" width="190" height="210" fill="transparent"/><g transform="translate(490 400)"><g class="pill"><rect width="150" height="44" rx="22"/><text x="75" y="29" text-anchor="middle">SKILLS</text></g></g></a>
+          <a class="hot" href="#contact" aria-label="Contact me"><rect x="170" y="130" width="220" height="380" fill="transparent"/><g transform="translate(205 240)"><g class="pill"><rect width="150" height="44" rx="22"/><text x="75" y="29" text-anchor="middle">SAY HI</text></g></g></a>
+        </g>
+      </svg>
+
+    </section>
+
+    <!-- logo ticker -->
+    <section class="ticker" aria-label="Brands I have worked with">
+      <div class="ticker-track">
+        <img src="images/logos/asos.png" alt="ASOS" /><img src="images/logos/bmj-logo.png" alt="BMJ" /><img src="images/logos/bwin-logo.png" alt="Bwin" /><img src="images/logos/orange-logo.png" alt="Orange" /><img src="images/logos/capita-logo.png" alt="Capita" /><img src="images/logos/concep-logo.png" alt="Concep" /><img src="images/logos/bmt-logo.png" alt="BMT Group" /><img src="images/logos/the-group-logo.jpg" alt="the group" /><img src="images/logos/harvey-logo.jpg" alt="Harvey Nichols" />
+        <img src="images/logos/asos.png" alt="" aria-hidden="true" /><img src="images/logos/bmj-logo.png" alt="" aria-hidden="true" /><img src="images/logos/bwin-logo.png" alt="" aria-hidden="true" /><img src="images/logos/orange-logo.png" alt="" aria-hidden="true" /><img src="images/logos/capita-logo.png" alt="" aria-hidden="true" /><img src="images/logos/concep-logo.png" alt="" aria-hidden="true" /><img src="images/logos/bmt-logo.png" alt="" aria-hidden="true" /><img src="images/logos/the-group-logo.jpg" alt="" aria-hidden="true" /><img src="images/logos/harvey-logo.jpg" alt="" aria-hidden="true" />
+      </div>
+    </section>
+
+    <!-- ══════════ ABOUT ══════════ -->
+    <section class="section s-mustard" id="about">
+      <div class="wrap about">
+        <figure class="about-art rv"><img src="images/saguna-avatar.png" alt="Illustrated portrait of Saguna, smiling, with wavy black hair and a teal hoodie" width="900" height="769" /></figure>
+        <div class="about-copy">
+          <p class="label rv">About</p>
+          <h2 class="rv">Accessible by default, colourful by choice.</h2>
+          <p class="lede rv">A Front-End Engineer with over twenty years’ experience delivering customer-focused digital products across start-ups, agencies, publishers and global brands — most recently building e-commerce experiences at ASOS.</p>
+          <p class="rv">I balance hands-on delivery with close collaboration across UX, QA, analytics and architecture. I write thoroughly tested code — Jest, Cypress and Playwright are second nature — and build to WCAG&nbsp;AAA, testing with screen readers.</p>
+          <p class="rv">I hold a BSc (Hons) in Multimedia Computing from the University of Westminster, and I’ve run stand-ups, retros and knowledge shares, onboarded developers, and picked up whole new stacks like Flutter and Dart with enthusiasm.</p>
+          <dl class="stats rv">
+            <div><dt>Years in front-end</dt><dd data-count="20" data-suffix="+">20+</dd></div>
+            <div><dt>Websites built</dt><dd data-count="60" data-suffix="+">60+</dd></div>
+            <div><dt>Household brands</dt><dd data-count="15" data-suffix="+">15+</dd></div>
+            <div><dt>Accessibility</dt><dd>AAA</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ BUILT AT ASOS ══════════ -->
+    <section class="section s-pink" id="asos">
+      <div class="wrap">
+        <p class="label rv">Built at ASOS · 2025 — now</p>
+        <h2 class="big rv">Two things shoppers use on every product page — I built them.</h2>
+        <p class="lede rv">During my time at ASOS I built the <strong>Filters pull-out menu</strong> and the <strong>Guided search carousel</strong> on the product listing page. Here’s each one, in the wild.</p>
+
+        <div class="feature-grid">
+          <article class="feature row rv">
+            <button class="shot" type="button" data-zoom="images/asos1.png" data-alt="ASOS Filters pull-out menu open over a dresses listing" data-gallery='[["images/asos1.png", "The Filters pull-out menu open over a dresses listing page", "Filters pull-out menu, over the listing page"], ["images/asos-filter-list.jpg", "The full list of filters: Sale/New Season, Brand, Size, Style, Length, Body Fit, Sleeve Length, Dress Type, Colour, Neckline and New in date, with Clear all and View items buttons", "The full filter list"], ["images/asos-filter-colour.jpg", "The Colour filter showing colour swatches with item counts. White, Red, Blue and Pink are ticked and shown as removable chips above the results", "Colour filter, with selected colours shown as chips"], ["images/asos-filter-price.jpg", "The Price range filter with a two-handle slider from £0 to £265, and Clear and View items buttons", "Price range slider"], ["images/asos-filter-sort.jpg", "The Sort panel with radio options: Recommended, What&#39;s new, Price high to low and Price low to high", "Sort panel"]]' aria-label="Open all 5 Filters screens in a pop-up">
+              <img src="images/asos1.png" alt="ASOS Filters pull-out menu open over a dresses listing page" width="1022" height="932" loading="lazy" decoding="async" />
+              <span class="mark" style="left:0;top:0;width:36%;height:100%"><b>Filters pull-out</b></span>
+              <span class="more" aria-hidden="true">+ 4 more screens</span>
+            </button>
+            <div class="feature-copy">
+              <p class="label">Feature 01</p>
+              <h3>Filters pull-out menu</h3>
+              <p>A slide-in panel that lets shoppers narrow thousands of products by size, colour, brand, length and more — then jump straight back to the results with <em>View items</em>, or reset with <em>Clear all</em>.</p>
+              <ul>
+                <li>Sticky header and action bar, with a scrolling list of filters between</li>
+                <li>Refactored from the legacy filter menu and range-based search</li>
+                <li>React &amp; Redux Toolkit, with Jest and Playwright tests, checked with screen readers</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="feature wide rv">
+            <button class="shot" type="button" data-zoom="images/asos-guided-search.jpg" data-alt="ASOS Women's Tops page with the Guided search carousel of image tiles under the intro text" aria-label="Enlarge screenshot: Guided search carousel">
+              <img src="images/asos-guided-search.jpg" alt="ASOS Women's Tops listing page. Under the intro text, a horizontal carousel of small image tiles (Long sleeve, Going out, Corset, Black, White and more) guides shoppers into narrower searches." width="1882" height="921" loading="lazy" decoding="async" />
+              <span class="mark" style="left:1.4%;top:42.6%;width:96.2%;height:23%"><b>Guided search carousel</b></span>
+            </button>
+            <div class="feature-copy">
+              <p class="label">Feature 02</p>
+              <h3>Guided search carousel</h3>
+              <p>A horizontal carousel of small image tiles — Long sleeve, Going out, Corset, Halter neck, Lace and more — each labelled with a style, so shoppers can tap straight into a narrower search instead of scrolling the whole category. Next and previous arrows let them move along the row.</p>
+              <ul>
+                <li>Swipeable row of image tiles with labels and arrow controls</li>
+                <li>Keyboard and screen-reader friendly</li>
+                <li>Built as a reusable component on the listing page</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <p class="note rv">Screenshots from asos.com. Tap a screenshot to enlarge — the Filters one opens all five screens.</p>
+      </div>
+    </section>
+
+    <!-- ══════════ WORK (record crate) ══════════ -->
+    <section class="section s-cream" id="work">
+      <div class="wrap">
+        <p class="label rv">The record · 2003 — now</p>
+        <h2 class="big rv">Flick through my work.</h2>
+        <p class="lede rv">Nine chapters, newest first. Pick a sleeve to open the case file.</p>
+        <ul class="crate" id="crate"></ul>
+        <noscript><p class="lede">Turn on JavaScript to flick through the case files, or email me for my full CV.</p></noscript>
+      </div>
+    </section>
+
+    <!-- ══════════ WORDS ══════════ -->
+    <section class="section s-ink" id="words">
+      <div class="wrap">
+        <p class="label rv">Words</p>
+        <h2 class="big rv">From people I’ve worked alongside.</h2>
+        <div class="words">
+          <blockquote class="rv"><p>I’ve had the pleasure of working with Saguna for the past six years, during which time she has grown tremendously as a Front-End Developer. She is very easy to work with, proactive, always willing to help, and a fantastic team player. Her dedication to continuous learning and her positive, supportive attitude makes her an invaluable part of any team.</p><footer>Neha Bharadwaj · <cite>Engineering Manager, BMJ Learning</cite></footer></blockquote>
+          <blockquote class="rv"><p>Since joining the OnExam team Saguna has made a direct positive impact on the quantity of work delivered and the ways of working in the team. The OnExam app rebuild would not have progressed as quickly, or with the same level of quality, without her.</p><footer>Ross Whistler · <cite>Project Manager, BMJ Learning &amp; OnExamination</cite></footer></blockquote>
+          <blockquote class="rv"><p>Having an engineer with excellent front-end skills and a keen design eye has allowed Saguna to tackle all the tricky, detailed UI work, ensuring the app’s design is perfect. She has also frequently taken the initiative to lead the team during stand-ups.</p><footer>Rebecca Kirrane · <cite>Lead Product / UX Designer, BMJ Learning</cite></footer></blockquote>
+          <blockquote class="rv"><p>Saguna is a very good Front-End Web Developer with solid problem-solving and technical skills. She is determined, committed, diligent and full of enthusiasm for her work. I would have no hesitation whatsoever in working with her again, or indeed recommending her.</p><footer>Anna Maria Matt · <cite>Design Lead, Bwin</cite></footer></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ SKILLS ══════════ -->
+    <section class="section s-teal" id="skills">
+      <div class="wrap">
+        <p class="label rv">Skills</p>
+        <h2 class="big rv">What’s on my desk.</h2>
+        <div class="skills">
+          <div class="rv"><h3>Core</h3><ul><li>HTML &amp; semantic markup</li><li>CSS / SASS / LESS</li><li>JavaScript</li><li>React &amp; Redux Toolkit</li><li>Dart &amp; Flutter</li><li>Responsive web design</li><li>Material UI &amp; Bootstrap</li></ul></div>
+          <div class="rv"><h3>Testing &amp; Quality</h3><ul><li>Jest, Cypress &amp; Playwright</li><li>Optimizely A/B testing</li><li>Accessibility to WCAG AAA</li><li>Screen-reader testing</li><li>Cross-browser &amp; device</li><li>New Relic monitoring</li></ul></div>
+          <div class="rv"><h3>Tooling &amp; Delivery</h3><ul><li>Git &amp; GitHub</li><li>CI/CD — GitHub Actions, Jenkins</li><li>AWS &amp; Azure DevOps</li><li>Docker &amp; Kubernetes</li><li>Gulp, Grunt &amp; Compass</li><li>CMS — Adobe CQ5, Umbraco</li></ul></div>
+          <div class="rv"><h3>Ways of Working</h3><ul><li>Agile / Scrum</li><li>Design-led workflow with Figma</li><li>Jira, Trello &amp; Version One</li><li>Mentoring &amp; onboarding</li><li>Running ceremonies &amp; demos</li><li>Delivering to tight deadlines</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CONTACT ══════════ -->
+    <section class="section s-mustard contact" id="contact">
+      <div class="wrap">
+        <p class="label rv">Contact</p>
+        <h2 class="huge rv">Shall we work together?</h2>
+        <p class="lede rv">Always happy to talk about front-end engineering, accessibility, or your next project.</p>
+        <p class="hero-actions rv"><a class="btn btn-ink" href="mailto:sagunas@gmail.com">sagunas@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/saguna-tailor/" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/sagunatailor" target="_blank" rel="noopener">GitHub</a></p>
+      </div>
+    </section>
+  </main>
+  <footer class="foot"><p>Saguna Tailor · Front-End Engineer · London · <span id="year"></span></p></footer>
+
+  <!-- Case-file drawer -->
+  <dialog class="drawer" id="drawer" aria-labelledby="dTitle">
+    <button class="d-close" id="dClose" type="button" aria-label="Close case file">×</button>
+    <div class="d-grid">
+      <aside class="d-brief" id="dBrief"></aside>
+      <div class="d-body" id="dBody"></div>
+    </div>
+  </dialog>
+
+  <!-- Lightbox -->
+  <dialog class="lightbox" id="lightbox" aria-label="Screenshot viewer">
+    <button class="d-close" id="lbClose" type="button" aria-label="Close image">×</button>
+    <img id="lbImg" alt="" />
+    <div class="lb-bar" id="lbBar" hidden>
+      <button type="button" id="lbPrev" aria-label="Previous screen">←</button>
+      <p id="lbCap" aria-live="polite"></p>
+      <button type="button" id="lbNext" aria-label="Next screen">→</button>
+    </div>
+  </dialog>
+
+  <script src="js/work.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
