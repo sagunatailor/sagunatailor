@@ -123,3 +123,104 @@
 
   $('#year').textContent = new Date().getFullYear();
 })();
+
+/* recommendations: fill the left rail, mark the current quote, and fade the text in line by line */
+(() => {
+  const lists = [...document.querySelectorAll('.words')];
+  if (!lists.length) return;
+  lists.forEach(l => l.classList.add('lit'));
+
+  // wrap every word so each line of text can be faded on its own
+  document.querySelectorAll('.words p').forEach(p => {
+    const walker = document.createTreeWalker(p, NodeFilter.SHOW_TEXT), nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(n => {
+      const frag = document.createDocumentFragment();
+      n.textContent.split(/(\s+)/).forEach(part => {
+        if (!part) return;
+        if (/^\s+$/.test(part)) { frag.append(' '); return; }
+        const w = document.createElement('span'); w.className = 'w'; w.textContent = part; frag.append(w);
+      });
+      n.replaceWith(frag);
+    });
+  });
+
+  // group the words into lines (words sharing the same top edge)
+  let lines = [];
+  const measure = () => {
+    lines = [];
+    lists.forEach(list => {
+      if (list.hidden) return;
+      list.querySelectorAll('blockquote').forEach(q => {
+        const qTop = q.getBoundingClientRect().top;
+        let cur = null;
+        q.querySelectorAll('p .w').forEach(w => {
+          const off = Math.round(w.getBoundingClientRect().top - qTop);
+          if (!cur || Math.abs(off - cur.off) > 4) { cur = { q, off, words: [], o: -1 }; lines.push(cur); }
+          cur.words.push(w);
+        });
+      });
+    });
+  };
+
+  let queued = false;
+  const update = () => {
+    queued = false;
+    const vh = innerHeight, focus = vh * 0.5;
+    const start = vh * 0.82, band = vh * 0.34;      // a line starts brightening at 82% down the screen, is full by ~48%
+    let best = null, bestGap = Infinity;
+    const tops = new Map();
+    lists.forEach(list => {
+      if (list.hidden) return;
+      const r = list.getBoundingClientRect();
+      list.style.setProperty('--fill', Math.min(1, Math.max(0, (focus - r.top) / r.height)).toFixed(4));
+      list.querySelectorAll('blockquote').forEach(q => {
+        const b = q.getBoundingClientRect();
+        tops.set(q, b.top);
+        q.classList.toggle('past', b.top < focus);
+        const gap = focus < b.top ? b.top - focus : focus > b.bottom ? focus - b.bottom : 0;
+        if (gap < bestGap) { bestGap = gap; best = q; }
+      });
+    });
+    lines.forEach(l => {
+      const y = tops.get(l.q) + l.off;
+      const o = Math.round((0.22 + 0.78 * Math.min(1, Math.max(0, (start - y) / band))) * 50) / 50;
+      if (o !== l.o) { l.o = o; l.words.forEach(w => { w.style.opacity = o; }); }
+    });
+    document.querySelectorAll('.words blockquote.active').forEach(q => q !== best && q.classList.remove('active'));
+    if (best) best.classList.add('active');
+  };
+  const ask = () => { if (!queued) { queued = true; requestAnimationFrame(update); } };
+  const remeasure = () => { measure(); update(); };
+  addEventListener('scroll', ask, { passive: true });
+  addEventListener('resize', remeasure);
+  addEventListener('load', remeasure);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(remeasure);
+  const toggle = document.getElementById('wordsToggle');
+  if (toggle) toggle.addEventListener('click', () => setTimeout(remeasure, 0));
+  remeasure();
+})();
+
+/* hero: type the tagline out, one character at a time */
+(() => {
+  const p = document.getElementById('heroSub');
+  if (!p) return;
+  const text = p.textContent.replace(/\s+/g, ' ').trim();
+  const still = () => matchMedia('(prefers-reduced-motion: reduce)').matches || document.documentElement.classList.contains('still');
+  if (still()) return;
+  // screen readers get the whole sentence; the typed copy is decorative
+  p.textContent = '';
+  const full = document.createElement('span'); full.className = 'vh'; full.textContent = text;
+  const vis = document.createElement('span'); vis.setAttribute('aria-hidden', 'true');
+  const done = document.createElement('span'), cursor = document.createElement('span'), rest = document.createElement('span');
+  cursor.className = 'type-cursor'; rest.className = 'type-rest'; rest.textContent = text;
+  vis.append(done, cursor, rest); p.append(full, vis);
+  let i = 0;
+  const step = () => {
+    if (still()) i = text.length;
+    else i++;
+    done.textContent = text.slice(0, i); rest.textContent = text.slice(i);
+    if (i < text.length) setTimeout(step, /[,—.]/.test(text[i - 1]) ? 260 : 28 + Math.random() * 45);
+  };
+  setTimeout(step, 900);
+})();
