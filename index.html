@@ -212,13 +212,15 @@
         <div class="wrap">
           <p class="label rv">Built at ASOS · 2025 — now</p>
           <h2 class="big rv">
-            Two things shoppers use on every product page — I built them.
+            Two things shoppers use on every product page, and the tool behind
+            them — I built them.
           </h2>
           <p class="lede rv">
             During my time at ASOS I built the
             <strong>Filters pull-out menu</strong> and the
-            <strong>Guided search carousel</strong> on the product listing page.
-            Here’s each one, in the wild.
+            <strong>Guided search carousel</strong> on the product listing page,
+            and created <strong>Merchandising Web</strong>, an internal tool,
+            from scratch. Here’s each one.
           </p>
 
           <div class="feature-grid">
@@ -226,13 +228,13 @@
               <button
                 class="shot"
                 type="button"
-                data-zoom="images/asos1.png"
+                data-zoom="images/asos/asos1.png"
                 data-alt="ASOS Filters pull-out menu open over a dresses listing"
-                data-gallery='[["images/asos1.png", "The Filters pull-out menu open over a dresses listing page", "Filters pull-out menu, over the listing page"], ["images/asos-filter-list.jpg", "The full list of filters: Sale/New Season, Brand, Size, Style, Length, Body Fit, Sleeve Length, Dress Type, Colour, Neckline and New in date, with Clear all and View items buttons", "The full filter list"], ["images/asos-filter-colour.jpg", "The Colour filter showing colour swatches with item counts. White, Red, Blue and Pink are ticked and shown as removable chips above the results", "Colour filter, with selected colours shown as chips"], ["images/asos-filter-price.jpg", "The Price range filter with a two-handle slider from £0 to £265, and Clear and View items buttons", "Price range slider"], ["images/asos-filter-sort.jpg", "The Sort panel with radio options: Recommended, What&#39;s new, Price high to low and Price low to high", "Sort panel"]]'
+                data-gallery='[["images/asos/asos1.png", "The Filters pull-out menu open over a dresses listing page", "Filters pull-out menu, over the listing page"], ["images/asos/asos-filter-list.jpg", "The full list of filters: Sale/New Season, Brand, Size, Style, Length, Body Fit, Sleeve Length, Dress Type, Colour, Neckline and New in date, with Clear all and View items buttons", "The full filter list"], ["images/asos/asos-filter-colour.jpg", "The Colour filter showing colour swatches with item counts. White, Red, Blue and Pink are ticked and shown as removable chips above the results", "Colour filter, with selected colours shown as chips"], ["images/asos/asos-filter-price.jpg", "The Price range filter with a two-handle slider from £0 to £265, and Clear and View items buttons", "Price range slider"], ["images/asos/asos-filter-sort.jpg", "The Sort panel with radio options: Recommended, What&#39;s new, Price high to low and Price low to high", "Sort panel"]]'
                 aria-label="Open all 5 Filters screens in a pop-up"
               >
                 <img
-                  src="images/asos1.png"
+                  src="images/asos/asos1.png"
                   alt="ASOS Filters pull-out menu open over a dresses listing page"
                   width="1022"
                   height="932"
@@ -276,12 +278,12 @@
               <button
                 class="shot"
                 type="button"
-                data-zoom="images/asos-guided-search.jpg"
+                data-zoom="images/asos/asos-guided-search.jpg"
                 data-alt="ASOS Women's Tops page with the Guided search carousel of image tiles under the intro text"
                 aria-label="Enlarge screenshot: Guided search carousel"
               >
                 <img
-                  src="images/asos-guided-search.jpg"
+                  src="images/asos/asos-guided-search.jpg"
                   alt="ASOS Women's Tops listing page. Under the intro text, a horizontal carousel of small image tiles (Long sleeve, Going out, Corset, Black, White and more) guides shoppers into narrower searches."
                   width="1882"
                   height="921"
@@ -313,10 +315,62 @@
                 </ul>
               </div>
             </article>
+
+            <article class="feature row rv">
+              <button
+                class="shot"
+                type="button"
+                data-zoom="images/asos/asos-merch-edit.png"
+                data-alt="Merchandising Web Edit Rule screen for demoting products on sale category pages"
+                data-gallery='[["images/asos/asos-merch-rules.png", "The Merchandising Web rules list: a Create rule button, a search box and a list of 387 merchandising rules, each showing a Live status and the number of locations it applies to", "Rules list, searchable, with live status"], ["images/asos/asos-merch-edit.png", "The Edit Rule screen: a category picker, a Block, Demote or Promote rule type selector, demotion strength, up to two attribute conditions, a plain-English summary of the rule and an optional schedule", "Rule builder: where it applies, rule type, conditions and schedule"], ["images/asos/asos-merch-debug.png", "The Edit Rule screen with Debug mode on, showing an Algolia rule preview: the generated JSON for the rule, saved to Algolia as optional filters", "Debug mode: preview of the Algolia rule that will be saved"]]'
+                aria-label="Open all 3 Merchandising Web screens in a pop-up"
+              >
+                <img
+                  src="images/asos/asos-merch-edit.png"
+                  alt="Merchandising Web Edit Rule screen: category picker, rule type, conditions and schedule"
+                  width="1548"
+                  height="1996"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="more" aria-hidden="true">+ 2 more screens</span>
+              </button>
+              <div class="feature-copy">
+                <p class="label">Feature 03 · Internal tool</p>
+                <h3>Merchandising Web</h3>
+                <p>
+                  An internal tool I designed and built from scratch, connected
+                  to our Algolia search backend. It gives the Digital Trade team
+                  a self-service way to <em>promote</em>, <em>demote</em> or
+                  <em>block</em> products on category pages, so they can shape
+                  what shoppers see without waiting on engineering.
+                </p>
+                <ul>
+                  <li>
+                    Rule builder: choose the category pages, the rule type and
+                    its strength, then up to two conditions and an exception on
+                    product attributes
+                  </li>
+                  <li>
+                    Plain-English summary of every rule before it is saved, plus
+                    optional scheduling
+                  </li>
+                  <li>
+                    Rules saved to Algolia, with a debug mode that previews the
+                    generated rule
+                  </li>
+                  <li>
+                    Searchable list of live rules across the store, so the team
+                    can find and manage them quickly
+                  </li>
+                </ul>
+              </div>
+            </article>
           </div>
           <p class="note rv">
-            Screenshots from asos.com. Tap a screenshot to enlarge — the Filters
-            one opens all five screens.
+            Screenshots from asos.com and Merchandising Web (internal; IDs
+            redacted). Tap a screenshot to enlarge — the Filters one opens all
+            five screens, Merchandising Web opens three.
           </p>
         </div>
       </section>
@@ -345,6 +399,50 @@
           <p class="label rv">Words</p>
           <h2 class="big rv">From people I’ve worked alongside.</h2>
           <div class="words">
+            <blockquote class="rv">
+              <p>
+                Your enthusiasm for learning new things, collaboration and
+                attention to detail are very strong. You’ve thrown yourself into
+                working on some difficult features and have made some really
+                solid implementations. You’re also a great colleague and pairing
+                partner. In terms of weaknesses, I think there could be some
+                small improvements in reviewing your work and refactoring
+                sometimes, but overall you’ve been an incredible addition to the
+                team.
+              </p>
+              <footer>
+                Jackie Dunne · <cite>Staff Engineering Lead, ASOS</cite>
+              </footer>
+            </blockquote>
+            <blockquote class="rv">
+              <p>
+                You’re a strong communicator, easy to collaborate with, and
+                consistently show enthusiasm for learning new things. While
+                you’re still building familiarity with the tech stack, you’ve
+                shown great initiative and a strong learning mindset. With
+                continued hands-on experience, your proficiency is sure to grow
+                quickly.
+              </p>
+              <footer>
+                Adam Thompson · <cite>Senior Software Engineer, ASOS</cite>
+              </footer>
+            </blockquote>
+            <blockquote class="rv">
+              <p>
+                Saguna delivers at an impressive and consistent pace, and across
+                a genuinely wide surface area — grid expansion, the filtering
+                experience, gender filter and guided search / visual categories.
+                She’s shipped a steady stream of work; it often feels like
+                something of hers is going out most days. She’s equally
+                comfortable turning her hand to less visible work like the Wiz
+                vulnerability fixes, working through issues quickly rather than
+                letting them sit. That range and follow-through make her very
+                dependable.
+              </p>
+              <footer>
+                Owen Kao · <cite>iOS Engineer, ASOS</cite>
+              </footer>
+            </blockquote>
             <blockquote class="rv">
               <p>
                 I’ve had the pleasure of working with Saguna for the past six
